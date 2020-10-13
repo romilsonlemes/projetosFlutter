@@ -1,4 +1,8 @@
 //Exemplo de criação de Classes
+imprimirDadosCliente(String nome, String endereco, String cidade) {
+  print('O cliente ${nome} mora na ${endereco}, na cidade ${cidade} !!!');
+}
+
 class Cliente {
   String nome;
   String endereco;
@@ -8,6 +12,8 @@ class Cliente {
   String cep;
   String ddd;
   String telefone;
+
+  Cliente({this.nome, this.endereco, this.cidade});
 }
 
 main() {
@@ -23,5 +29,11 @@ main() {
   cl.ddd = '011';
   cl.telefone = '98115-0868';
 
-  print('${cl.nome}, ${cl.endereco}, ${cl.numero}');
+  //print('${cl.nome}, ${cl.endereco}, ${cl.numero}');
+  var cl1 = Cliente(
+      nome: 'Romilson Lemes',
+      endereco: 'Rua Luis Cestari',
+      cidade: 'Monte Alto');
+
+  imprimirDadosCliente(cl1.nome, cl1.endereco, cl1.cidade);
 }
